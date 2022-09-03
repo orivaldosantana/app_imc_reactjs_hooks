@@ -1,9 +1,14 @@
 import './App.css'
+import Form from './components/form'
+import Header from './components/header'
 
 function App() {
   return (
     <div className="App">
-      <h1>Cálculo do IMC</h1>
+      <Header title="Cálculo do IMC" />
+      <div className="Body">
+        <Form />
+      </div>
     </div>
   )
 }
