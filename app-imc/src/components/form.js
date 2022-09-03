@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Form = () => {
+const Form = props => {
   const [mass, setMass] = useState('')
   const [height, setHeight] = useState('')
 
@@ -8,6 +8,7 @@ const Form = () => {
     e.preventDefault()
     const imc = mass / height ** 2
     console.log('IMC: ' + imc)
+    props.handleResult(imc)
   }
 
   return (
