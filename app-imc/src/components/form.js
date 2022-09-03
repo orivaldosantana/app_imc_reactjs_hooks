@@ -11,8 +11,8 @@ const Form = () => {
   }
 
   return (
-    <div className="Form" onSubmit={handleSubmit}>
-      <form>
+    <div className="Form">
+      <form onSubmit={handleSubmit}>
         <label>Massa:</label>
         <input
           type="number"
