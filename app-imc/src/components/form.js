@@ -3,8 +3,15 @@ import { useState } from 'react'
 const Form = () => {
   const [mass, setMass] = useState('')
   const [height, setHeight] = useState('')
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const imc = mass / height ** 2
+    console.log('IMC: ' + imc)
+  }
+
   return (
-    <div className="Form">
+    <div className="Form" onSubmit={handleSubmit}>
       <form>
         <label>Massa:</label>
         <input
@@ -12,7 +19,6 @@ const Form = () => {
           value={mass}
           required
           onChange={e => {
-            console.log(e.target.value)
             setMass(e.target.value)
           }}
         />
@@ -23,6 +29,7 @@ const Form = () => {
           value={height}
           onChange={e => setHeight(e.target.value)}
         />
+        <button>Calcular</button>
       </form>
     </div>
   )

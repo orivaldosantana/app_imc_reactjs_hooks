@@ -39,3 +39,14 @@ header {
   box-sizing: border-box;
   display: block;
 }
+
+button {
+  background: #282c34;
+  color: #fff;
+  border: 0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
