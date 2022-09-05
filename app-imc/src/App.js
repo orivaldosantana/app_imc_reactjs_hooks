@@ -4,7 +4,7 @@ import Form from './components/form'
 import Header from './components/header'
 
 function App() {
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState(0)
 
   const updateResult = r => {
     setResult(r)
