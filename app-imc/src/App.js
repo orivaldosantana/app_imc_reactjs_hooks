@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Display from './components/display'
 import Form from './components/form'
 import Header from './components/header'
 
@@ -15,7 +16,7 @@ function App() {
       <Header title="Cálculo do IMC" />
       <div className="Body">
         <Form handleResult={updateResult} />
-        <p>Resultado: {result.toFixed(2)} </p>
+        <Display imc={result} />
       </div>
     </div>
   )
